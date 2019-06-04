@@ -1,6 +1,4 @@
-export function circles(points: Float32Array, totalSegments: i32, pixelX: f32, pixelY: f32): Float32Array {
-  let triangles = new Float32Array(totalSegments * 6);
-
+export function circles(points: Float32Array, totalSegments: i32, pixelX: f32, pixelY: f32, triangles: Float32Array): void {
   let index: i32 = 0;
   let target: i32 = 0;
 
@@ -27,6 +25,4 @@ export function circles(points: Float32Array, totalSegments: i32, pixelX: f32, p
       triangles[target++] = last_y;
     }
   }
-
-  return triangles;
 }

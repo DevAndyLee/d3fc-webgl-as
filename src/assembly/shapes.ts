@@ -1,7 +1,5 @@
-export function shapes(points: Float32Array, shape: Float32Array, pixelX: f32, pixelY: f32): Float32Array {
+export function shapes(points: Float32Array, shape: Float32Array, pixelX: f32, pixelY: f32, triangles: Float32Array): void {
   let trianglesPerPoint = shape.length / 2 - 1;
-  let totalSegments = (points.length / 3) * trianglesPerPoint;
-  let triangles = new Float32Array(totalSegments * 6);
 
   let index: i32 = 0;
   let target: i32 = 0;
@@ -25,6 +23,4 @@ export function shapes(points: Float32Array, shape: Float32Array, pixelX: f32, p
       triangles[target++] = y + shape[shapePos++] * sizeY;
     }
   }
-
-  return triangles;
 }

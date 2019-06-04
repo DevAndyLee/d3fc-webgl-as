@@ -1,7 +1,6 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import wasm from 'rollup-plugin-wasm'
 
 const packageName = 'd3fc-webgl-as';
 
@@ -16,7 +15,6 @@ export default {
   plugins: [
       resolve(),
       commonjs(),
-      wasm(),
       babel({
         babelrc: false,
         presets: [

@@ -34,11 +34,10 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "rollup": "^1.11.3",
+    "rollup": "^1.13.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-resolve": "^4.2.4",
-    "rollup-plugin-wasm": "^3.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1",
     "uglify-js": "^3.5.11"
   }
 }
