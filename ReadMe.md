@@ -6,11 +6,8 @@ Implemented to support the [d3fc-webgl](https://github.com/DevAndyLee/d3fc-webgl
 
 ## Build
 
-Requires [emscripten](https://emscripten.org/docs/getting_started/downloads.html) support to build.
-
 ```
-  npm run create-folder
-  npm run compile
+  npm run asbuid
   npm run build
 ```
 
