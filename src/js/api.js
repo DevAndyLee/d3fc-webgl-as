@@ -1,4 +1,4 @@
-import {instantiateStreaming} from '../../node_modules/assemblyscript/lib/loader/index.js';
+import {instantiateStreaming} from 'assemblyscript/lib/loader/index.js';
 import optimized from '../../wasm/optimized';
 
 export const api = {};
