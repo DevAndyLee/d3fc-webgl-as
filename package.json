@@ -1,6 +1,6 @@
 {
   "name": "d3fc-webgl-as",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A WebAssembly support library for d3fc-webgl",
   "license": "MIT",
   "homepage": "https://github.com/DevAndyLee/d3fc-webgl-as",
