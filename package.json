@@ -1,0 +1,30 @@
+{
+  "name": "d3fc-webgl-as",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "assemblyscript": "github:AssemblyScript/assemblyscript"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^4.2.4",
+    "rollup-plugin-wasm": "^3.0.0",
+    "uglify-js": "^3.5.11"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "asbuild:untouched": "asc src/assembly/index.ts -b wasm/untouched.wasm -t wasm/untouched.wat --sourceMap --validate --debug",
+    "asbuild:optimized": "asc src/assembly/index.ts -b wasm/optimized.wasm -t wasm/optimized.wat --sourceMap --validate --optimize",
+    "asbuild:encode": "node scripts/encode.js",
+    "asbuild": "npm run asbuild:optimized && npm run asbuild:encode",
+    "build": "rollup -c",
+    "uglify": "uglifyjs build/d3fc-webgl-as.js --output build/d3fc-webgl-as.min.js",
+    "prepublishOnly": "npm run build && npm run uglify"
+  }
+}
