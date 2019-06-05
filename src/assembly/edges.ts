@@ -28,6 +28,7 @@ export function edges(positions: Float32Array, lineWidth: f32, pixelX: f32, pixe
 }
 
 function pixelDist(x1: f32, y1: f32, x2: f32, y2: f32, pixelX: f32, pixelY: f32): f32 {
-  return Mathf.sqrt(Mathf.pow((x2 - x1) / pixelX, 2) + Mathf.pow((y2 - y1) / pixelY, 2));
-} 
-
+  let xd: f32 = (x2 - x1) / pixelX;
+  let yd: f32 = (y2 - y1) / pixelY;
+  return Mathf.sqrt(xd * xd + yd * yd);
+}
